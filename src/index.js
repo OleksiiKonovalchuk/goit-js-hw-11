@@ -97,6 +97,13 @@ const onSubmit = e => {
     })
     .then(data => {
       data.map(cardCreator);
+      const { height: cardHeight } =
+        refs.gallery.firstElementChild.getBoundingClientRect();
+
+      window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
       return gallery.refresh();
     })
     .catch(error => console.log(error));
@@ -106,12 +113,3 @@ const onSubmit = e => {
 
 refs.form.addEventListener('submit', onSubmit);
 refs.gallery.addEventListener('click', onGalleryClick);
-
-// const { height: cardHeight } = document
-//   .querySelector('.gallery')
-//   .firstElementChild.getBoundingClientRect();
-
-// window.scrollBy({
-//   top: cardHeight * 2,
-//   behavior: 'smooth',
-// });
