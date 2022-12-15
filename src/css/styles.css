@@ -11,45 +11,50 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-.country-list {
+p {
+  margin: 0;
+  display: block;
+}
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-card {
+  display: block;
+  width: 300px;
+  border: 1px solid rgb(211, 208, 208);
+  border-radius: 3px;
+  box-shadow: 0px 1px  #979292;
+}
+.span {
+  font-weight: 700;display: block;
+}
+.photo-card img {
+
+  width: 300px;
+  height: 200px;
+}
+.info {
+  padding: 0;
+  display: flex;
   list-style: none;
+  justify-content: space-evenly;
+}
+.info-item {
   display: flex;
   flex-direction: column;
-  gap:  7px;
-}
-.country-item {
-  display: flex;
-  padding: 5px;
-}
-.country-name {
-  margin:  0 0 0 10px;
-}
-.country-flag {
-  max-height: 20px;
-  width: 30px;
-}
-.country-name-big {
-  margin: 0 0 0 10px;
-  font-weight: 600;
-  font-size: 35px;
-}
-.descr-list {
-  padding: 0;
-}
-.descr {
-  font-weight: 800;
-}
-.content {
-  font-weight: 500;
-}
-.country-wrapper {
-  display: flex;
+  justify-content: space-evenly;
   align-items: center;
+}
+.load-more {
+  display: none;
+}
+.shown {
+  display: block;
 }
